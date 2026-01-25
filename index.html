@@ -1,118 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adventurers Guild</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      margin: 0;
-      padding: 0;
-      color: #0f172a;
-    }
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-    .notice {
-      background: #e2e8f0;
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 8px;
-      margin: 20px;
-    }
-    .notice a {
-      color: #16a34a;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 15px;
-    }
-    .job {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .job h2 {
-      margin-top: 0;
-    }
-    .meta {
-      font-size: 14px;
-      color: #475569;
-      margin-bottom: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #64748b;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adventurers Guild</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/background.jpg') no-repeat center center / cover;
+  color: #fff;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.75);
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header img {
+  width: 120px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+}
+
+h1 {
+  margin: 15px 0 5px;
+  letter-spacing: 2px;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background: #1abc9c;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #16a085;
+}
+
+.job-card {
+  background: rgba(255,255,255,0.12);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+.update-board {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.donate img {
+  width: 180px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+</style>
 </head>
+
 <body>
+<div class="overlay">
 
 <header>
-  <h1>🛡️ Adventurers Guild ⚔️</h1>
-  <p>Odd jobs • Same-day work • Real-world adventures</p>
+  <img src="images/logo.png" alt="Adventurers Guild Logo">
+  <h1>ADVENTURERS GUILD</h1>
+  <p>Connecting people with real-world tasks & everyday adventures</p>
 </header>
 
-<div class="notice">
-  📢 <strong>Contact Us:</strong><br>
-  🧭 <strong>For Adventurers:</strong> <a href="tel:+919999999901">+91 99999 99901</a><br>
-  🏠 <strong>For Job Givers:</strong> <a href="tel:+919999999902">+91 99999 99902</a><br>
-  🚨 <strong>General / Urgent queries:</strong> <a href="tel:+919999999903">+91 99999 99903</a>
-</div>
+<section>
+  <h2>⚔️ What is Adventurers Guild?</h2>
+  <p>
+    Adventurers Guild is a community platform where people can find help for
+    short-term jobs, daily tasks, and local work.
+    We connect those who need help with those ready to take on the quest.
+  </p>
+</section>
 
-<div class="container">
+<section>
+  <h2>⚔️ Available Quests</h2>
 
-  <!-- JOB BLOCK: Replace only the text below for new jobs -->
-  <div class="job">
-    <h2>Job Title Here</h2>
-    <div class="meta">📍 City • 💰 Pay/hour or Pay/day</div>
-    <p>Short description of the job here.</p>
+  <!-- JOB 1 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Chennai</p>
+    <p><strong>Job:</strong> Event Helper</p>
+    <p><strong>Pay per hr:</strong> ₹500</p>
   </div>
-  <!-- END JOB BLOCK -->
 
-  <!-- NO JOBS BLOCK: Show this when all jobs are hooked up -->
-  <div class="job">
-    <h2> HELLO,guyz! this website is beta version read the below description.official launch date will be updated here</h2>
-    <div class="meta">So basically this website is job posting website but different</div>
-    <p>adventurers who do the job. like real anime daily live job update!</p>
+  <!-- JOB 2 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Coimbatore</p>
+    <p><strong>Job:</strong> Delivery Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹400</p>
   </div>
-  <!-- END NO JOBS BLOCK -->
 
-</div>
+  <!-- JOB 3 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Bangalore</p>
+    <p><strong>Job:</strong> Pet Sitting</p>
+    <p><strong>Pay per hr:</strong> ₹350</p>
+  </div>
+
+  <!-- JOB 4 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Mumbai</p>
+    <p><strong>Job:</strong> House Cleaning</p>
+    <p><strong>Pay per hr:</strong> ₹450</p>
+  </div>
+
+  <!-- JOB 5 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Delhi</p>
+    <p><strong>Job:</strong> Delivery Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹500</p>
+  </div>
+
+  <!-- JOB 6 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Hyderabad</p>
+    <p><strong>Job:</strong> Warehouse Helper</p>
+    <p><strong>Pay per hr:</strong> ₹420</p>
+  </div>
+
+  <!-- JOB 7 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Kochi</p>
+    <p><strong>Job:</strong> Shop Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹380</p>
+  </div>
+
+  <!-- JOB 8 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Trichy</p>
+    <p><strong>Job:</strong> Data Entry</p>
+    <p><strong>Pay per hr:</strong> ₹300</p>
+  </div>
+
+  <!-- JOB 9 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Madurai</p>
+    <p><strong>Job:</strong> Store Helper</p>
+    <p><strong>Pay per hr:</strong> ₹350</p>
+  </div>
+
+  <!-- JOB 10 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Salem</p>
+    <p><strong>Job:</strong> Packing Work</p>
+    <p><strong>Pay per hr:</strong> ₹320</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>📢 Update Board</h2>
+  <p>For job updates, availability, and confirmations, contact:</p>
+
+  <div class="update-board">
+    <p>📞 Admin 1: +91 XXXXXXXXXX</p>
+    <p>📞 Admin 2: +91 XXXXXXXXXX</p>
+    <p>📞 Admin 3: +91 XXXXXXXXXX</p>
+  </div>
+
+  <p style="font-size:14px; opacity:0.8;">
+    ⚠️ Please call between 9 AM – 7 PM only.
+  </p>
+</section>
+
+<section>
+  <h2>🌍 Join the Guild</h2>
+  <a class="btn" href="https://www.instagram.com/adventurers_guild_?igsh=eGdocGs4cjVoYmxp" target="_blank">
+    Follow on Instagram
+  </a>
+  <a class="btn" href="https://www.facebook.com/1009807992207257" target="_blank">
+    Visit Facebook Page
+  </a>
+</section>
+
+<section class="donate">
+  <h2>💚 Support the Guild</h2>
+  <p>
+    Adventurers Guild is free to use.
+    Donations are optional and help support platform development.
+  </p>
+  <img src="images/qr.png" alt="UPI Donation QR">
+</section>
 
 <footer>
   <p>
-    <strong>Adventurers Guild</strong> connects people who need quick, short-term help with individuals ready to work the same day.
-    Jobs are shared manually to keep things simple, transparent, and community-focused.
-  </p>
-  <p>
-    Adventurers Guild is an information-sharing platform only. All work, payments, and agreements are handled directly between job givers and adventurers.
-  </p>
-  <p>
-    © 2026 Adventurers Guild • Updated daily • Safety first
+    © 2026 Adventurers Guild. All rights reserved.<br>
+    Adventurers Guild acts only as a connecting platform.
+    Payments and work agreements are strictly between users.
   </p>
 </footer>
 
-
+</div>
+</body>
+</html>
