@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adventurers Guild</title>
-
 <style>
 body {
   margin: 0;
@@ -12,35 +11,22 @@ body {
   background: url('images/background.jpg') no-repeat center center/cover;
   color: #fff;
 }
-
 .overlay {
   background: rgba(0,0,0,0.75);
   min-height: 100vh;
 }
-
 header {
   text-align: center;
   padding: 40px 20px;
 }
-
 header img {
   width: 120px;
   border-radius: 50%;
   background: #fff;
   padding: 10px;
 }
-
-h1 {
-  margin: 15px 0 5px;
-  letter-spacing: 2px;
-}
-
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
+h1 { margin: 15px 0 5px; letter-spacing: 2px; }
+section { max-width: 900px; margin: auto; padding: 30px 20px; }
 .btn {
   display: inline-block;
   margin: 10px;
@@ -51,24 +37,18 @@ section {
   border-radius: 25px;
   font-weight: bold;
 }
-
-.btn:hover {
-  background: #16a085;
-}
-
+.btn:hover { background: #16a085; }
 .job-card {
   background: rgba(255,255,255,0.1);
   padding: 20px;
   margin: 15px 0;
   border-radius: 12px;
 }
-
 .update-board {
   background: rgba(0,0,0,0.6);
   padding: 20px;
   border-radius: 12px;
 }
-
 .donate img {
   width: 180px;
   background: #fff;
@@ -76,7 +56,6 @@ section {
   border-radius: 10px;
   margin-top: 10px;
 }
-
 footer {
   background: rgba(0,0,0,0.9);
   text-align: center;
@@ -85,7 +64,6 @@ footer {
 }
 </style>
 </head>
-
 <body>
 <div class="overlay">
 
@@ -107,7 +85,7 @@ footer {
 <section>
   <h2 id="update-board-title">⚔️ Available Quests</h2>
   <div id="jobs-container">
-    <!-- Jobs will be loaded dynamically from Firebase -->
+    <!-- Jobs loaded dynamically from Firebase -->
   </div>
 </section>
 
@@ -150,44 +128,40 @@ footer {
   </p>
 </footer>
 
-<!-- Firebase Integration -->
+<!-- Firebase (Compat Version for Simplicity) -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 
 <script>
-  // ===== Replace the below config with YOUR Firebase project info =====
+  // Firebase config already inserted
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyD29jty_lmFkrhfRJynFK1zz08vX-3xAy8",
+    authDomain: "adventurers-guild-67bb4.firebaseapp.com",
+    databaseURL: "https://adventurers-guild-67bb4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "adventurers-guild-67bb4",
+    storageBucket: "adventurers-guild-67bb4.firebasestorage.app",
+    messagingSenderId: "283137445366",
+    appId: "1:283137445366:web:d4e79a5a17d17e87efcbd7"
   };
 
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const database = firebase.database();
 
-  // Load Update Board heading
-  const updateBoardHeadingRef = database.ref('updateBoardTitle');
-  updateBoardHeadingRef.on('value', (snapshot) => {
+  // Update Board Title
+  database.ref('updateBoardTitle').on('value', snapshot => {
     document.getElementById('update-board-heading').innerText = snapshot.val();
   });
 
-  // Load Main Announcement
-  const mainAnnouncementRef = database.ref('mainAnnouncement');
-  mainAnnouncementRef.on('value', (snapshot) => {
+  // Main Announcement
+  database.ref('mainAnnouncement').on('value', snapshot => {
     document.getElementById('main-announcement').innerText = snapshot.val();
   });
 
-  // Load Jobs dynamically
-  const jobsRef = database.ref('jobs');
-  jobsRef.on('value', (snapshot) => {
+  // Jobs
+  database.ref('jobs').on('value', snapshot => {
     const jobsData = snapshot.val();
     const container = document.getElementById('jobs-container');
-    container.innerHTML = ''; // clear old jobs
+    container.innerHTML = '';
     for (let key in jobsData) {
       const job = jobsData[key];
       container.innerHTML += `
@@ -200,12 +174,10 @@ footer {
     }
   });
 
-  // Load phone numbers dynamically
-  const phonesRef = database.ref('contact');
-  phonesRef.on('value', (snapshot) => {
+  // Phones
+  database.ref('contact').on('value', snapshot => {
     const data = snapshot.val();
-    const phonesDiv = document.getElementById('phones');
-    phonesDiv.innerHTML = `
+    document.getElementById('phones').innerHTML = `
       <p>📞 Admin 1: ${data.phone1}</p>
       <p>📞 Admin 2: ${data.phone2}</p>
       <p>📞 Admin 3: ${data.phone3}</p>
