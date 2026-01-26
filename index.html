@@ -8,80 +8,108 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: url('images/background.jpg') no-repeat center center / cover;
   color: #fff;
 }
 
 .overlay {
-  background: rgba(0,0,0,0.75);
+  background: linear-gradient(
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.75)
+  );
   min-height: 100vh;
 }
 
 header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px 30px;
 }
 
 header img {
-  width: 120px;
+  width: 130px;
   border-radius: 50%;
   background: #fff;
-  padding: 10px;
+  padding: 12px;
+  box-shadow: 0 0 25px rgba(26,188,156,0.6);
 }
 
 h1 {
-  margin: 15px 0 5px;
-  letter-spacing: 2px;
+  margin: 18px 0 6px;
+  letter-spacing: 3px;
+  font-size: 32px;
+}
+
+header p {
+  font-size: 16px;
+  opacity: 0.9;
 }
 
 section {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 40px 22px;
+}
+
+h2 {
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 12px 25px;
-  background: #1abc9c;
+  margin: 12px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
   color: #000;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-weight: bold;
+  box-shadow: 0 8px 20px rgba(26,188,156,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
-  background: #16a085;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(26,188,156,0.6);
 }
 
 .job-card {
   background: rgba(255,255,255,0.12);
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
+  padding: 22px;
+  margin: 18px 0;
+  border-radius: 14px;
+  border-left: 4px solid #1abc9c;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.job-card:hover {
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.18);
 }
 
 .update-board {
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 12px;
+  background: rgba(0,0,0,0.65);
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .donate img {
-  width: 180px;
+  width: 190px;
   background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 12px;
 }
 
 footer {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   text-align: center;
-  padding: 20px;
+  padding: 25px 15px;
   font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
 }
 </style>
 </head>
@@ -92,96 +120,101 @@ footer {
 <header>
   <img src="images/logo.png" alt="Adventurers Guild Logo">
   <h1>ADVENTURERS GUILD</h1>
-  <p>Connecting people with real-world tasks & everyday adventures</p>
+  <p>Turning everyday work into real-world adventures</p>
 </header>
 
 <section>
   <h2>⚔️ What is Adventurers Guild?</h2>
   <p>
-    Adventurers Guild is a community platform where people can find help for
-    short-term jobs, daily tasks, and local work.
-    We connect those who need help with those ready to take on the quest.
+    <strong>Adventurers Guild</strong> is more than just a job platform.
+    It was created with one clear purpose — to help <strong>unemployed and struggling youngsters</strong>
+    survive, earn, and grow through real-world opportunities.
+  </p>
+  <p>
+    Many people are willing to work but don’t always find long-term jobs.
+    At the same time, many others need help with small tasks — handyman work,
+    delivery assistance, cleaning, pet care, event support, odd jobs, and more.
+    Adventurers Guild connects both sides.
+  </p>
+  <p>
+    Inspired by the <strong>anime adventurers guild concept</strong>,
+    this platform treats every task as a “quest” and every worker as an “adventurer”.
+    Here, dignity of work matters — whether it’s a small job or a big challenge.
+  </p>
+  <p>
+    Our goal is to build a <strong>real-life adventurers community</strong> —
+    where people support each other, gain experience, earn honestly,
+    and move forward together instead of being left behind.
   </p>
 </section>
 
 <section>
   <h2>⚔️ Available Quests</h2>
 
-  <!-- JOB 1 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Chennai</p>
-    <p><strong>Job:</strong> Event Helper</p>
-    <p><strong>Pay per hr:</strong> ₹500</p>
+    <p><strong>📍 Location:</strong> Chennai</p>
+    <p><strong>🛠 Job:</strong> Event Helper</p>
+    <p><strong>💰 Pay per hour:</strong> ₹500</p>
   </div>
 
-  <!-- JOB 2 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Coimbatore</p>
-    <p><strong>Job:</strong> Delivery Assistant</p>
-    <p><strong>Pay per hr:</strong> ₹400</p>
+    <p><strong>📍 Location:</strong> Coimbatore</p>
+    <p><strong>🛠 Job:</strong> Delivery Assistant</p>
+    <p><strong>💰 Pay per hour:</strong> ₹400</p>
   </div>
 
-  <!-- JOB 3 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Bangalore</p>
-    <p><strong>Job:</strong> Pet Sitting</p>
-    <p><strong>Pay per hr:</strong> ₹350</p>
+    <p><strong>📍 Location:</strong> Bangalore</p>
+    <p><strong>🛠 Job:</strong> Pet Sitting</p>
+    <p><strong>💰 Pay per hour:</strong> ₹350</p>
   </div>
 
-  <!-- JOB 4 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Mumbai</p>
-    <p><strong>Job:</strong> House Cleaning</p>
-    <p><strong>Pay per hr:</strong> ₹450</p>
+    <p><strong>📍 Location:</strong> Mumbai</p>
+    <p><strong>🛠 Job:</strong> House Cleaning</p>
+    <p><strong>💰 Pay per hour:</strong> ₹450</p>
   </div>
 
-  <!-- JOB 5 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Delhi</p>
-    <p><strong>Job:</strong> Delivery Assistant</p>
-    <p><strong>Pay per hr:</strong> ₹500</p>
+    <p><strong>📍 Location:</strong> Delhi</p>
+    <p><strong>🛠 Job:</strong> Delivery Assistant</p>
+    <p><strong>💰 Pay per hour:</strong> ₹500</p>
   </div>
 
-  <!-- JOB 6 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Hyderabad</p>
-    <p><strong>Job:</strong> Warehouse Helper</p>
-    <p><strong>Pay per hr:</strong> ₹420</p>
+    <p><strong>📍 Location:</strong> Hyderabad</p>
+    <p><strong>🛠 Job:</strong> Warehouse Helper</p>
+    <p><strong>💰 Pay per hour:</strong> ₹420</p>
   </div>
 
-  <!-- JOB 7 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Kochi</p>
-    <p><strong>Job:</strong> Shop Assistant</p>
-    <p><strong>Pay per hr:</strong> ₹380</p>
+    <p><strong>📍 Location:</strong> Kochi</p>
+    <p><strong>🛠 Job:</strong> Shop Assistant</p>
+    <p><strong>💰 Pay per hour:</strong> ₹380</p>
   </div>
 
-  <!-- JOB 8 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Trichy</p>
-    <p><strong>Job:</strong> Data Entry</p>
-    <p><strong>Pay per hr:</strong> ₹300</p>
+    <p><strong>📍 Location:</strong> Trichy</p>
+    <p><strong>🛠 Job:</strong> Data Entry</p>
+    <p><strong>💰 Pay per hour:</strong> ₹300</p>
   </div>
 
-  <!-- JOB 9 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Madurai</p>
-    <p><strong>Job:</strong> Store Helper</p>
-    <p><strong>Pay per hr:</strong> ₹350</p>
+    <p><strong>📍 Location:</strong> Madurai</p>
+    <p><strong>🛠 Job:</strong> Store Helper</p>
+    <p><strong>💰 Pay per hour:</strong> ₹350</p>
   </div>
 
-  <!-- JOB 10 -->
   <div class="job-card">
-    <p><strong>Location:</strong> Salem</p>
-    <p><strong>Job:</strong> Packing Work</p>
-    <p><strong>Pay per hr:</strong> ₹320</p>
+    <p><strong>📍 Location:</strong> Salem</p>
+    <p><strong>🛠 Job:</strong> Packing Work</p>
+    <p><strong>💰 Pay per hour:</strong> ₹320</p>
   </div>
-
 </section>
 
 <section>
   <h2>📢 Update Board</h2>
-  <p>For job updates, availability, and confirmations, contact:</p>
+  <p>For job availability, confirmations, and updates:</p>
 
   <div class="update-board">
     <p>📞 Admin 1: +91 XXXXXXXXXX</p>
@@ -208,7 +241,7 @@ footer {
   <h2>💚 Support the Guild</h2>
   <p>
     Adventurers Guild is free to use.
-    Donations are optional and help support platform development.
+    Donations are optional and help us maintain and grow the platform.
   </p>
   <img src="images/qr.png" alt="UPI Donation QR">
 </section>
@@ -216,9 +249,9 @@ footer {
 <footer>
   <p>
     © 2026 Adventurers Guild. All rights reserved.<br>
+    📧 Contact: <strong>adventurersguild@gmail.com</strong><br>
     Adventurers Guild acts only as a connecting platform.
     Payments and work agreements are strictly between users.
-    www.adventurersguild@gmail.com
   </p>
 </footer>
 
