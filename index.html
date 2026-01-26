@@ -4,29 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adventurers Guild</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('images/background.jpg') no-repeat center center/cover;
+  background: url('images/background.jpg') no-repeat center center / cover;
   color: #fff;
 }
+
 .overlay {
   background: rgba(0,0,0,0.75);
   min-height: 100vh;
 }
+
 header {
   text-align: center;
   padding: 40px 20px;
 }
+
 header img {
   width: 120px;
   border-radius: 50%;
   background: #fff;
   padding: 10px;
 }
-h1 { margin: 15px 0 5px; letter-spacing: 2px; }
-section { max-width: 900px; margin: auto; padding: 30px 20px; }
+
+h1 {
+  margin: 15px 0 5px;
+  letter-spacing: 2px;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
 .btn {
   display: inline-block;
   margin: 10px;
@@ -37,18 +51,24 @@ section { max-width: 900px; margin: auto; padding: 30px 20px; }
   border-radius: 25px;
   font-weight: bold;
 }
-.btn:hover { background: #16a085; }
+
+.btn:hover {
+  background: #16a085;
+}
+
 .job-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.12);
   padding: 20px;
   margin: 15px 0;
   border-radius: 12px;
 }
+
 .update-board {
   background: rgba(0,0,0,0.6);
   padding: 20px;
   border-radius: 12px;
 }
+
 .donate img {
   width: 180px;
   background: #fff;
@@ -56,6 +76,7 @@ section { max-width: 900px; margin: auto; padding: 30px 20px; }
   border-radius: 10px;
   margin-top: 10px;
 }
+
 footer {
   background: rgba(0,0,0,0.9);
   text-align: center;
@@ -64,6 +85,7 @@ footer {
 }
 </style>
 </head>
+
 <body>
 <div class="overlay">
 
@@ -77,24 +99,96 @@ footer {
   <h2>⚔️ What is Adventurers Guild?</h2>
   <p>
     Adventurers Guild is a community platform where people can find help for
-    day-to-day jobs, short work, and local tasks.
+    short-term jobs, daily tasks, and local work.
     We connect those who need help with those ready to take on the quest.
   </p>
 </section>
 
 <section>
-  <h2 id="update-board-title">⚔️ Available Quests</h2>
-  <div id="jobs-container">
-    <!-- Jobs loaded dynamically from Firebase -->
+  <h2>⚔️ Available Quests</h2>
+
+  <!-- JOB 1 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Chennai</p>
+    <p><strong>Job:</strong> Event Helper</p>
+    <p><strong>Pay per hr:</strong> ₹500</p>
   </div>
+
+  <!-- JOB 2 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Coimbatore</p>
+    <p><strong>Job:</strong> Delivery Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹400</p>
+  </div>
+
+  <!-- JOB 3 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Bangalore</p>
+    <p><strong>Job:</strong> Pet Sitting</p>
+    <p><strong>Pay per hr:</strong> ₹350</p>
+  </div>
+
+  <!-- JOB 4 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Mumbai</p>
+    <p><strong>Job:</strong> House Cleaning</p>
+    <p><strong>Pay per hr:</strong> ₹450</p>
+  </div>
+
+  <!-- JOB 5 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Delhi</p>
+    <p><strong>Job:</strong> Delivery Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹500</p>
+  </div>
+
+  <!-- JOB 6 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Hyderabad</p>
+    <p><strong>Job:</strong> Warehouse Helper</p>
+    <p><strong>Pay per hr:</strong> ₹420</p>
+  </div>
+
+  <!-- JOB 7 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Kochi</p>
+    <p><strong>Job:</strong> Shop Assistant</p>
+    <p><strong>Pay per hr:</strong> ₹380</p>
+  </div>
+
+  <!-- JOB 8 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Trichy</p>
+    <p><strong>Job:</strong> Data Entry</p>
+    <p><strong>Pay per hr:</strong> ₹300</p>
+  </div>
+
+  <!-- JOB 9 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Madurai</p>
+    <p><strong>Job:</strong> Store Helper</p>
+    <p><strong>Pay per hr:</strong> ₹350</p>
+  </div>
+
+  <!-- JOB 10 -->
+  <div class="job-card">
+    <p><strong>Location:</strong> Salem</p>
+    <p><strong>Job:</strong> Packing Work</p>
+    <p><strong>Pay per hr:</strong> ₹320</p>
+  </div>
+
 </section>
 
 <section>
-  <h2 id="update-board-heading">📢 Update Board</h2>
-  <p id="main-announcement">Loading announcement...</p>
-  <div class="update-board" id="phones">
-    <!-- Phone numbers loaded dynamically -->
+  <h2>📢 Update Board</h2>
+  <p>For job updates, availability, and confirmations, contact:</p>
+
+  <div class="update-board">
+    <p>📞 Admin 1: +91 XXXXXXXXXX</p>
+    <p>📞 Admin 2: +91 XXXXXXXXXX</p>
+    <p>📞 Admin 3: +91 XXXXXXXXXX</p>
   </div>
+
   <p style="font-size:14px; opacity:0.8;">
     ⚠️ Please call between 9 AM – 7 PM only.
   </p>
@@ -114,7 +208,7 @@ footer {
   <h2>💚 Support the Guild</h2>
   <p>
     Adventurers Guild is free to use.
-    Donations are voluntary and help support platform development.
+    Donations are optional and help support platform development.
   </p>
   <img src="images/qr.png" alt="UPI Donation QR">
 </section>
@@ -122,68 +216,11 @@ footer {
 <footer>
   <p>
     © 2026 Adventurers Guild. All rights reserved.<br>
-    Adventurers Guild acts only as a connecting platform.<br>
-    Payments and work agreements are between users.<br>
-    Contact: www.adventurersguild2026@gmail.com
+    Adventurers Guild acts only as a connecting platform.
+    Payments and work agreements are strictly between users.
+    www.adventurersguild@gmail.com
   </p>
 </footer>
-
-<!-- Firebase (Compat Version for Simplicity) -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-
-<script>
-  // Firebase config already inserted
-  const firebaseConfig = {
-    apiKey: "AIzaSyD29jty_lmFkrhfRJynFK1zz08vX-3xAy8",
-    authDomain: "adventurers-guild-67bb4.firebaseapp.com",
-    databaseURL: "https://adventurers-guild-67bb4-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "adventurers-guild-67bb4",
-    storageBucket: "adventurers-guild-67bb4.firebasestorage.app",
-    messagingSenderId: "283137445366",
-    appId: "1:283137445366:web:d4e79a5a17d17e87efcbd7"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const database = firebase.database();
-
-  // Update Board Title
-  database.ref('updateBoardTitle').on('value', snapshot => {
-    document.getElementById('update-board-heading').innerText = snapshot.val();
-  });
-
-  // Main Announcement
-  database.ref('mainAnnouncement').on('value', snapshot => {
-    document.getElementById('main-announcement').innerText = snapshot.val();
-  });
-
-  // Jobs
-  database.ref('jobs').on('value', snapshot => {
-    const jobsData = snapshot.val();
-    const container = document.getElementById('jobs-container');
-    container.innerHTML = '';
-    for (let key in jobsData) {
-      const job = jobsData[key];
-      container.innerHTML += `
-        <div class="job-card">
-          <p><strong>Location:</strong> ${job.location}</p>
-          <p><strong>Job:</strong> ${job.description}</p>
-          <p><strong>Pay per hr:</strong> ₹${job.payPerHr}</p>
-        </div>
-      `;
-    }
-  });
-
-  // Phones
-  database.ref('contact').on('value', snapshot => {
-    const data = snapshot.val();
-    document.getElementById('phones').innerHTML = `
-      <p>📞 Admin 1: ${data.phone1}</p>
-      <p>📞 Admin 2: ${data.phone2}</p>
-      <p>📞 Admin 3: ${data.phone3}</p>
-    `;
-  });
-</script>
 
 </div>
 </body>
